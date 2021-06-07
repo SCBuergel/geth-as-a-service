@@ -1,0 +1,19 @@
+[Unit]
+Description=geth via VPN
+After=network.target
+
+[Service]
+User=geth
+Group=geth
+Environment=HOME=/home/geth
+Type=simple
+Restart=always
+RestartSec=30s
+ExecStart=geth --http --http.addr="10.8.0.1" --cache=8192 --http.corsdomain="*"
+KillMode=process
+KillSignal=SIGINT
+TimeoutStopSec=90
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
