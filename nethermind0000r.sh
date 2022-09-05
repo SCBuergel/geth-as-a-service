@@ -1,6 +1,6 @@
-sudo add-apt-repository ppa:nethermindeth/nethermind
+sudo add-apt-repository ppa:nethermindeth/nethermind -y
 sudo apt update
-sudo apt install nethermind
+sudo apt install nethermind -y
 sudo adduser --disabled-password --home /home/nethermind --shell /bin/bash --gecos "" nethermind
 echo '
 NETHERMIND_CONFIG="mainnet_pruned"
