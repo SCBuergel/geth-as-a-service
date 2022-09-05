@@ -1,5 +1,5 @@
 # geth-as-a-service
-This is a minimal ubuntu service to run [go-ethereum](https://github.com/ethereum/go-ethereum) on a server behind a VPN. Please install the latest version of geth first.
+This is a minimal ubuntu service to run [go-ethereum](https://github.com/ethereum/go-ethereum) on a server. Please install the latest version of geth first. Alternative, the geth installation and all below steps are included when running the `geth0000r.sh` script.
 
 1. Create `geth` user, for security purposes this user will run geth without admin priviledges) and it has no password
 ```
@@ -10,8 +10,8 @@ sudo adduser --disabled-password --home /home/geth --shell /bin/bash --gecos "" 
 
 3. Enable and start geth service
 ```
-systemctl enable geth
-systemctl start geth
+sudo systemctl enable geth
+sudo systemctl start geth
 ```
 
 4. Check if the geth service is running in list of services
