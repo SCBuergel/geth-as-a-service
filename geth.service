@@ -1,5 +1,5 @@
 [Unit]
-Description=geth via VPN
+Description=geth as a service
 After=network.target
 
 [Service]
@@ -9,7 +9,7 @@ Environment=HOME=/home/geth
 Type=simple
 Restart=always
 RestartSec=30s
-ExecStart=geth --http --http.addr="10.8.0.1" --cache=8192 --http.corsdomain="*"
+ExecStart=/user/bin/geth --http --cache=8192
 KillMode=process
 KillSignal=SIGINT
 TimeoutStopSec=90
