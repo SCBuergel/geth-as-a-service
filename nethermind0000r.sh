@@ -1,7 +1,7 @@
-sudo add-apt-repository ppa:nethermindeth/nethermind
-sudo apt update
-sudo apt install nethermind
+downloadlink=https://nethdev.blob.core.windows.net/builds/nethermind-linux-amd64-1.14.0-60f920b.zip
 sudo adduser --disabled-password --home /home/nethermind --shell /bin/bash --gecos "" nethermind
+wget $downloadlink
+unzip *.zip -d /home/nethermind
 echo '
 NETHERMIND_CONFIG="mainnet_pruned"
 NETHERMIND_JSONRPCCONFIG_ENABLED=true
