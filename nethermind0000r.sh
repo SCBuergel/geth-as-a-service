@@ -1,5 +1,5 @@
 sudo adduser --disabled-password --home /home/nethermind --shell /bin/bash --gecos "" nethermind
-wget -O- https://api.github.com/repos/NethermindEth/nethermind/releases/latest | grep nethermind-linux-arm64 | grep browser_download_url | sed "/\"browser_download_url\": \"/s///" | sed "/\"/s///" | xargs wget
+wget -O- https://api.github.com/repos/NethermindEth/nethermind/releases/latest | grep nethermind-linux-amd64 | grep browser_download_url | sed "/\"browser_download_url\": \"/s///" | sed "/\"/s///" | xargs wget
 sudo unzip *.zip -d /home/nethermind
 sudo echo '
 NETHERMIND_CONFIG="mainnet_pruned"
