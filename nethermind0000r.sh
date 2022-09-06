@@ -2,7 +2,7 @@ sudo adduser --disabled-password --home /home/nethermind --shell /bin/bash --gec
 wget -O- https://api.github.com/repos/NethermindEth/nethermind/releases/latest | grep nethermind-linux-amd64 | grep browser_download_url | sed "/\"browser_download_url\": \"/s///" | sed "/\"/s///" | xargs wget
 sudo unzip *.zip -d /home/nethermind
 sudo echo '
-NETHERMIND_CONFIG="mainnet_pruned"
+NETHERMIND_CONFIG="mainnet"
 NETHERMIND_JSONRPCCONFIG_ENABLED=true
 NETHERMIND_JSONRPCCONFIG_HOST="0.0.0.0"
 NETHERMIND_HEALTHCHECKSCONFIG_ENABLED="true"
