@@ -14,7 +14,7 @@ TimeoutStopSec=90
 Restart=on-failure
 EnvironmentFile=/home/nethermind/.env
 WorkingDirectory=/home/nethermind
-ExecStart=/home/nethermind//Nethermind.Runner --datadir /home/nethermind/data
+ExecStart=/home/nethermind/Nethermind.Runner --datadir /home/nethermind/data
 LimitNOFILE=1000000
 
 [Install]
