@@ -1,6 +1,5 @@
-downloadlink=https://nethdev.blob.core.windows.net/builds/nethermind-linux-amd64-1.14.0-60f920b.zip
 sudo adduser --disabled-password --home /home/nethermind --shell /bin/bash --gecos "" nethermind
-wget $downloadlink
+wget -O- https://api.github.com/repos/NethermindEth/nethermind/releases/latest | grep nethermind-linux-arm64 | grep browser_download_url | sed "/\"browser_download_url\": \"/s///" | sed "/\"/s///" | xargs wget
 unzip *.zip -d /home/nethermind
 echo '
 NETHERMIND_CONFIG="mainnet_pruned"
